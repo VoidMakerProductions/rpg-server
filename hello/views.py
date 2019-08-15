@@ -21,7 +21,7 @@ def index(request):
     ip = None
 
     try:
-        ip = IPStore.ojects.get().ip
+        ip = IPStore.objects.get().ip
     except IPStore.DoesNotExist:
         ip = None
     return Response({'ip':ip})
